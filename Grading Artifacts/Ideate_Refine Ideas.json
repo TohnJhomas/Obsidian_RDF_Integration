@@ -1,0 +1,26 @@
+{
+    "data":[
+        {
+            "idea_rank": 1,
+            "idea_name": "Semantic DB to Notetaking App",
+            "idea_summary": "Take an existing Open Knowledge Graph like DBPedia and work to get it imported into a linked notetaking software like Roam Research or ObsidianTake an existing Open Knowledge Graph like DBPedia and work to get it imported into a linked notetaking software like Roam Research or Obsidian",
+            "information_story": "many notetaking apps include some form of linked tagging or connectivity system, the creation and maintenance of rich semantic data in these systems is both expensive and time consuming. By using an existing knowledge graph, especially ones that are curated for a given company, we can add value and richness to personal notes from these well-maintained systems. As a case study, we'll start by picking a notetaking app based on API ability and usefulness. Then we'll identify an OKG standard we want to integrate, and find a sample knowledge graph in that standard. From there, we'd work to build a content mapping and integration tool for that specific case, before generalizing out to other notetaking apps and knowledge graphs.",
+            "possible_information_structure": "json"
+        },
+        {
+            "idea_rank": 2,
+            "idea_name": "Translatoion Schema for Existing OKGs",
+            "idea_summary": "Take existing Open Knowledge Graphs and map their structure and schema, then build a translation mapping that connects the information from these graphs",
+            "information_story": "By examining a few existing Open Knowledge Graphs, we can identify the commonalities and differences in their structure and schema. From there, we can build a translation mapping that connects the information from these graphs. This will allow us to create a unified view of the data, making it easier to work with and analyze.",
+            "possible_information_structure": "Taxonomy / Graph"
+        },
+        {
+            "idea_rank": 3,
+            "idea_name": "Computer Vision standard format conversion",
+            "idea_summary": "Build a translation layer between two common Computer Vision annotation formats, like MS COCO and YOLO.",
+            "information_story": "I would start by taking two of the most common training datasets in Kaggle or a similar data source, mapping their schemas, the design decisions, and the features of each, and then working to develop a translation layer between them",
+            "possible_information_structure": "json, taxonomy"
+        }
+        
+    ]
+}

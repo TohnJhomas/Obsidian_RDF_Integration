@@ -1,0 +1,4 @@
+Measure capabilities of existing project structures using FAIR
+
+On the one side, I’m dealing with RDF Triples in dbpedia, which is, in general, very FAIR. dbpedia has an extremely robust metadata framework, hitting a vast majority of the FAIR principles. The challenge for this project is going to be retaining some of that quality when the information is transformed into markdown text. The primary relevant areas of FAIR for this project are going to be focused on Interoperability and Reuse. This system will be built to convert dbpedia into obsidian notes, but with effective documentation and licensing, it should be easy to modify to convert any source of RDF triples into a markdown text file. 
+
