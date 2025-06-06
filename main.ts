@@ -1,41 +1,55 @@
 import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
-
+const express = require('express');
+const fs = require('fs');
+const { getPageByName, getResourceFromUri,  rdfToMarkdownGrouped} = require('./utils.js'); // Assume utility functions are implemented
 // Remember to rename these classes and interfaces!
 
-interface MyPluginSettings {
+interface dbpInterfaceSettings {
 	mySetting: string;
 }
 
-const DEFAULT_SETTINGS: MyPluginSettings = {
+const DEFAULT_SETTINGS: dbpInterfaceSettings = {
 	mySetting: 'default'
 }
 
-export default class MyPlugin extends Plugin {
-	settings: MyPluginSettings;
+export default class dbpInterfacePlugin extends Plugin {
+	settings: dbpInterfaceSettings;
 
 	async onload() {
 		await this.loadSettings();
 
 		// This creates an icon in the left ribbon.
-		const ribbonIconEl = this.addRibbonIcon('dice', 'Sample Plugin', (evt: MouseEvent) => {
+		const ribbonIconEl = this.addRibbonIcon('earth', 'Search DBPedia', async (evt: MouseEvent) => {
 			// Called when the user clicks the icon.
+			const SEARCH_TERM = "Product";
+			const results = getPageByName(SEARCH_TERM);
+		
+			if (results.error) {
+				console.error(results.error);
+				process.exit(1);
+			}
+		
+			const desiredURI = results.find(
+				(x: { label: { value: string; }; }) => x.label.value === "Product (business)"
+			).entity.value;
+		
+			const resource =  getResourceFromUri(desiredURI);
+			const markdownContent = rdfToMarkdownGrouped(resource)
+
+			// Make new page for markdown
+			const fileName = `DBP_${SEARCH_TERM}.md`;
+			const file = await this.app.vault.create(fileName, markdownContent);
+
+			// Open the new file in a new pane
+			const leaf = this.app.workspace.getLeaf(true);
+			leaf.openFile(file);
+
 			new Notice('This is a notice!');
 		});
 		// Perform additional things with the ribbon
 		ribbonIconEl.addClass('my-plugin-ribbon-class');
 
-		// This adds a status bar item to the bottom of the app. Does not work on mobile apps.
-		const statusBarItemEl = this.addStatusBarItem();
-		statusBarItemEl.setText('Status Bar Text');
 
-		// This adds a simple command that can be triggered anywhere
-		this.addCommand({
-			id: 'open-sample-modal-simple',
-			name: 'Open sample modal (simple)',
-			callback: () => {
-				new SampleModal(this.app).open();
-			}
-		});
 		// This adds an editor command that can perform some operation on the current editor instance
 		this.addCommand({
 			id: 'sample-editor-command',
@@ -108,9 +122,9 @@ class SampleModal extends Modal {
 }
 
 class SampleSettingTab extends PluginSettingTab {
-	plugin: MyPlugin;
+	plugin: dbpInterfacePlugin;
 
-	constructor(app: App, plugin: MyPlugin) {
+	constructor(app: App, plugin: dbpInterfacePlugin) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}

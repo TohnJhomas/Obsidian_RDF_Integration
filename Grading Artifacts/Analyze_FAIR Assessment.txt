@@ -1,4 +1,960 @@
-Measure capabilities of existing project structures using FAIR
+Baseline Project Plan
+Authors: John Thomas, Sinafek Liyew, Xinya Tang 
+​​1. Introduction: Project Overview
 
-On the one side, I’m dealing with RDF Triples in dbpedia, which is, in general, very FAIR. dbpedia has an extremely robust metadata framework, hitting a vast majority of the FAIR principles. The challenge for this project is going to be retaining some of that quality when the information is transformed into markdown text. The primary relevant areas of FAIR for this project are going to be focused on Interoperability and Reuse. This system will be built to convert dbpedia into obsidian notes, but with effective documentation and licensing, it should be easy to modify to convert any source of RDF triples into a markdown text file. 
+Provisions is a mid-sized restaurant with 10 employees. The restaurant is currently using a combination of tools like Homebase for scheduling and Paychex for payroll to manage operations. While these tools are functional, they are fragmented, inefficient, time consuming (“It works? It’s fine... but it’s extremely time-consuming”) and they require manual work that reduces operational clarity and increases staf anxiety regarding pay and scheduling. There is no single source of truth for scheduling or internal shift communication (“There’s no place for people to communicate about shifts... Too many ways to get information”).
 
+The primary objective of this project is to assess current information systems, identify the inefficiencies and propose a cost-effective, intuitive and streamlined system that integrates scheduling, payroll and internal communications.
+
+Constraints include budget sensitivity, need for ease of use, and the lean staffing model of the business, which limits time and technical resources for system implementation.
+2. System Description: Alternatives and Selected System
+
+Fig 1: The current Scheduling Process, handled by the Bar Manager
+
+
+Fig 2: The current payroll process, handled by Bar Owner
+
+
+Current systems include Homebase (scheduling), Toast POS (clock-ins), and Paychex (payroll processing). While these tools serve their respective functions, they lack integration and create unnecessary manual processes.
+
+Desired system features:
+- Unified scheduling, clock-in/out, payroll, and communication.
+- Intuitive and visually accessible interface.
+- Affordable pricing model suitable for small business scale.
+- Compliance with tip transparency and labor laws.
+
+Alternative options considered include Hotschedules (more robust but poor UI) and Toast Payroll (discontinued due to cost and complexity). The ideal system would streamline shift requests, payroll processing, and support a centralized digital log for bar activity.
+
+Scheduling is currently performed by Kyle, and payroll requires biweekly reports to ensure compliance. The goal is to consolidate these workflows into a single, simplified platform.
+3. Feasibility Assessment
+3.1 Economic Feasibility
+
+Toast and Paychex are currently in use but both are costly (“Paychex is what we’re using right now, they charge per payroll”). Toast takes a percentage of earning per closed check, and third-party services like UberEats/GrubHub incur monthly fees (~$82) (“Toast POS takes a fee... we pay a monthly fee for ubereats/doordash/grubhub 82/month”). Getting rid of or merging systems would reduce unnecessary fees and manual labor.
+
+3.2 Technical Feasibility
+There is no in-house IT administrator and therefore, the tools must be user-friendly and aligned with industry workflows. (“I expect systems to be as intuitive as possible, easy to use... Pertinent to the industry”).
+
+3.3 Operational Feasibility
+A unified system would reduce payroll anxiety and eliminate delays (“Nobody likes to get blindsided... if it doesn’t happen, that’s a problem”). The team already has scheduling tools but could benefit from refinements on payroll and communication (“We’re doing well on scheduling, we could use a lot of refinement on payroll”). Training would be needed but should be minimal if the system is intuitive (“The tools are only as good as the people who are using them”).
+3.4 Legal & Contractual Feasibility
+Key compliance concerns include:
+Adherence to two-week scheduling laws (“That’s recent, and it came about to make sure that hours are guaranteed to a certain degree”)
+
+
+Transparent tip tracking and distribution (“Transparency of Tip distribution”)
+
+
+Proper handling of breaks, clock-ins, and employee consent (“Make sure we’re in compliance... it’s illegal to change someone’s hours without their consent”)
+
+
+3.5 Political Feasibility
+Kyle, who manages scheduling and most operations, is the main decision-maker (“Kyle does scheduling”). However, broader staff buy-in is important. A feedback loop should be established to ask, “how do you like to communicate?” per their own suggestion.
+3.6 Schedule Feasibility
+A gradual rollout is ideal, particularly not during peak event periods. A pilot test could start with scheduling, followed by payroll integration.
+
+4. Management Issues
+After implementation, the bar manager and scheduler (Kyle) would manage the system with the possibility of onboarding an additional team member if necessary (“It would be nice to have one more person, but if you don’t have enough shifts to give people then it’s a problem” - Ramon).
+Training and Documentation
+Training should be minimal, but “training and documentation to minimize the bus factor” is essential, ensuring knowledge is shared just in case someone leaves. 
+Communication Plan
+ Project communication will rely on a mix of asynchronous digital tools and structured in-person check-ins to accommodate the fast-paced bar environment and small team size. The project manager and scheduler will coordinate via Slack or a shared Google Chat group for ongoing updates and issue resolution.
+
+ Weekly in-person syncs (10–15 minutes) with the bar leadership will be used for aligning on system setup, training, and rollout steps. Staff feedback will be collected via a monthly team meeting to assess usability and gather improvement suggestions. A shared digital project log (e.g., Google Doc or Notion page) will be maintained to document decisions, training notes, and open items.
+Acceptance Criteria:
+- System usage by all staff within two payroll cycles of deployment.
+- Documented reduction in time required for scheduling and payroll administration.
+- Staff feedback indicating improved clarity and satisfaction.
+
+
+Additional Concerns:
+ The team must balance staffing levels to ensure high service quality without overstaffing. While current staffing is generally effective, shift coverage coordination and communication tools require improvement to avoid confusion or scheduling gaps.
+
+
+
+Reference
+Valacich, J. S., & George, J. F. (2021). Modern systems analysis and design (9th ed., Global ed.). Pearson Education.
+Interview with Ramon Clark, Director of Operations, Provisions
+
+
+Interview:
+[John]
+We're recording just for the record. Do information to record this? Say what? Yeah, yes. I
+
+[Ramon]
+Ramon Clark has have given John Tom's permission to record my voice all
+
+[John]
+Right, um, so kind of starting with the project overview, uh, how do you currently manage scheduling a payroll? Like, what tools and processes do we have in place? Well, scheduling.
+
+[Ramon]
+We use a, uh? Program called home base. It's also an app. It's also online. It's really straightforward. Um. It's free, which is nice for most organizations. So unless you want to get way more robust with it, if you're especially for a bar scheduling is pretty straightforward, and it allows you to kind of change things on the Fly as well. Um, and it's like, I love it because it's kind of color coded, so it's just visually for me. It makes it it's really easy for me to kind of. Follow along and see where I am and where other people are because you can assign colors.
+
+[Ramon]
+Uh,
+
+[John]
+Everybody which you probably see because you're on home base as well. All I see is purple actually. Oh, really. Yeah, you can
+
+[Ramon]
+Like you can, like, give people different if different roles, different colors. You can kind of be, like, oh okay, yeah, so there's another one called, uh, hot schedules. It's way more robust. But. Uh, I think the user. Like the user, like the UI is not great. It's just the colors are, like, it's like a gray and blue. So, it's really hard to follow along. It's just if you're kind of dyslexic, like me, like, it's really hard. So, I, I recommend that for bigger organizations, I guess. But um, of course, it looks like a bar home base is planning again. It's free, especially if your team's small that's. That's the way we and that's what we use.
+
+[John]
+How does payroll work payroll,
+
+[Ramon]
+Um?
+
+[Ramon]
+You can do your own payroll in
+
+[John]
+The process. Like, where do we get the hours from?
+
+[Ramon]
+All right, so we're using toast right now, so our point of sale system is, you know, people clock in. We use toes, there's a bunch out there. Post is the most popular, but there's also Dynaware maitre d. Uh, it's kind of whatever you want to do. Uh, but yeah, you clock in. Uh, pay period is every two weeks. It's like most places. At the end of or close to the end of payroll, you just go through everyone's hours. You want to report? On those two weeks, and you make sure everything everyone clocked in properly. Uh, people took their breaks accordingly, according as well. According to Seattle law, there's supposed to be, I think, two 10, a 10-minute break probably four hours. If you're scheduled for 10 hours or more, you have to take a 30 minute.
+
+[Ramon]
+Paid like break? So, you check all those things to make sure we're in compliance. And then, you know, based on what people are getting paid hourly and with tips, and then here. All the tips go 100 to the employees. And it's just, uh, divvied up the way. The owner, like, that processes the payroll that just that's how he does it, and how he how he chooses to do it in an agreement with, uh, with the staff, and what's you know, legal, what's legal? How does, uh, what's the process for setting a schedule? Do you know, I guess, Kyle as well, but
+
+[John]
+In what way, like, is it just as College sit down and and outline everything based on rule? Is
+
+[Ramon]
+That you have to have a schedule, uh out two weeks in advance? You can change it within those two weeks.
+
+[Ramon]
+You have to. The schedule has to be posted at least two weeks in advance, so you have to know you have to know what you're doing. And yep, um. It's fairly recent. It came about, especially for restaurants Industries, because before you would have someone like come in, they were scheduled. And then it's kind of slow, and then they'd be, like, oh sorry, go home. We don't need you, so you wouldn't get paid. So, you have to have, basically, you kind of guaranteed hours. So, if you're going to call someone off, you need to give them.
+
+[Ramon]
+Way more leeway than, like, hey, I'm here, you know, you can still call people off, but it has. You know, things happen. But it was a way to kind of keep. Basically, it's a stop wage lift. It's hard for a restaurant honestly, because you know, it gets like, how busy something is. It really fluctuates differently seasonally, you know, randomly? Um. And restaurants are, you know, it's a tough business to run. So, every hour you're paying someone else takes away from profits. And if you're not, there's no one here. You don't need that person. You know?
+
+[Ramon]
+It's a it's kind of like this balancing balancing Act.
+
+[John]
+So,
+
+[Ramon]
+Essentially, the best way I do it when I'm doing scheduling right now. Yes, Kyle. I talk to the team I see. I try to do my best to get, give everyone the schedule they want. Um, again, and just different from, like, nine to five jobs, like in. In the restaurant industry, you know? It's pretty common to have, like, a day on a day off. And like the day your days off are kind of spread apart. I always like to give people back-to-back days off. I just think it's really healthy to have a balance in life.
+
+[Ramon]
+So it doesn't have to be the weekend, but it's like, you know, if you work five days, I'll give you Monday Tuesday off for, you know, Wednesday, Thursday, whatever it is. Whatever works for the team? Um, you know, some people were like, I'll work six days, seven days a week, and again, I, I'm personally against that because I'm like, outside of, like having to pick up shifts and stuff it just, you'll burn out, and then the hospitality will suffer how you cheat like, I look personally when I was just working like behind the bar and stuff. I wouldn't want to work more than five days. Sometimes I'll do more four days depending on the clientele, because it's just your communication with them. Just suffers because you get kind of burned out, and you just, you know, you just need to need those days to kind of re, you know?
+
+[Ramon]
+Out. Um, but yeah, so anyways, I will talk to the team. See the works for everybody. You do the best you can to keep everyone happy. I like to have a set schedule for people like, hey, this is the schedule. And then I would just set it up. You know, I would do it out months in advance, you know? There's always room to for people to, you know, take vacations or whatever. I like it. If someone would tell me like a couple weeks in advance, like, hey, we're planning this trip so we can adjust for that generally. In a restaurant, you try to get the employee tries to get.
+
+[Ramon]
+Is covered if they're going to take a vacation or even to the last last minute. It's like, hey, you hit up the team first, and if everyone's like, well, sorry, I can't do it. Then, you hit up management. It's like, hey, I have to do this thing, can you help me out with this? Gonna have to work, you know, it's. It is what it is. But yeah, so I, I like to have, like, a pretty consistent. Schedule, just so it's easier for everyone to wrap their heads around. Um. Some places a lot of places don't do that. It's it changes every week.
+
+[Ramon]
+Um, that makes sense if there's a lot of different. Like rolls like, like, there's a lot of prepping that someone has to do, like someone, if someone's always opening like the bar. And they have the, then they're the one that has the prep all the time. Other people forget how to do these tasks, so when they have to cover, then they don't know how to do it. So, it's good to kind of rotate those type of responsibilities. So, in that case, I'd be like, okay, no, no, this week, you know, John is gonna be the prepping.
+
+[Ramon]
+Next week. It's someone else Kyle's going to do it, you know? That way, everyone knows how to do each other's job. Um, so you don't, so you don't kind of like, get pigeonholed, and like, kind of, just fall into these these roles again. This is all very specific to restaurant stuff where the schedule could be. It moves. It's like a moving Target, but I personally like more of like, what's the consistency at provision specific? Right now. Kyle just, uh, puts this schedule together that works best for the team. I'm outside the schedule, so I'm assuming he has talked to all of you and the schedule seems pretty consistent. I'll check in with Kyle. Yeah, it seems pretty consistent, so I think he just checks that out and like fills gaps where they need to be filled.
+
+[Ramon]
+I think we do randomly. We'll do like events spun. You have to kind of adjust accordingly, so it's gonna have, like, way more people on, like, say, Monday, whereas just one bartender you might have to have, like, you know what, we're gonna need? Or and a server, then you come in earlier to help us something forgets, unless no one forgets. But that's where the scheduling that's where it's nice to have that two-week buffer, and then the communication is key you let people know. Don't don't spring things on people, just like, hey, this is this is coming up, and this in a couple of weeks.
+
+[Ramon]
+Home base again is nice because most apps do this,
+
+[John]
+But
+
+[Ramon]
+You can set notifications, and if something changes, it'll give you a little pain like, hey, your schedule changed! As all the employees. You can only go so far.
+
+[Xinya]
+So now, you basically schedule the. A whole
+
+[Ramon]
+In advance and
+
+[John]
+Two weeks so
+
+[Ramon]
+Legally, you should be doing two weeks
+
+[Xinya]
+And those hours are Grant guaranteed. They must be paid so you cannot cancel them, right?
+
+[Ramon]
+You guarantee it's a it's an agreement so? The schedule has to be out if something changes. You can still change things, but you have to talk with that employee, like. No, they if there's a, there's a night where, like, just nothing's gonna be happening or something you're not guaranteed those hours. We're not a union if it's a union situation, then that's different. And yeah, like, there's like guaranteed hours is a whole different thing with that, but you just have to. You have to be aware of your schedule because it's not just. Usually the employee changing their schedule. You're, like, oh, you know what? I can't work this day, or, you know, because you don't really know if you're going to be slow or not until the day. Or maybe there's a trend going on? It's like, you know, like after the holidays, it's always slow, but there's little times where it's, it's just not so, but usually that's when you kind of adjust, like, okay, and that's where having keeping records.
+
+[Ramon]
+Is really nice because you can actually go back pretty far and be, like, well, what did it look like last year? Are we busy this day and look at what you made, and then you can just adjust accordingly. Like, okay, so just, it's just you have to be. Plan it as good as possible. There's no perfect system, but yeah. If you have your schedule, yeah, expect to work unless you know something on the employee side is happening. Or, you know, the places catch a spire or something, you know.
+
+[John]
+So, what do you? What do you like about the current system? What do you think works well for the specifics bar? Mostly scheduling and like payroll. I know that I don't know what, actually, what? I don't know what tool reasons they were anymore. I don't go well as paychecks. I think we're using.
+
+[Ramon]
+Uh, and just to be clear, I'm not processing payroll. That's John, just does that. Yeah, um. I don't want to talk to John about this stuff, right? So Uh, tell us what we were using when I. When I started, we kind of moved away from that. I wasn't too happy with how they did their thing, just how they gave us information for like W-2s. It was, it's kind of convoluted. Again, most companies. What you're really paying for, because when you have payroll, there's all these taxes and stuff you have to like. Keep in mind. And so, when companies, it's nice to have a company that will do payroll for you.
+
+[Ramon]
+So all you're basically doing is like, hear the numbers. So, any companies the same way? So toes the paychecks? There's a bunch of them. You just say, you know, you said, you're set up with them. And you just say, here's the numbers. This pay period. It's very profitable, because yeah, so yeah, because then they're generating it's all automatically. They, they wherever the taxes need to go, and they stay up to date with all the different rules and stuff, so you don't have to like. Focus on that because it's a lot. It changes all the time. What are we? What are we using right now? Paycheck is what we're using right now.
+
+[Ramon]
+I thought I used the last place we use. We use paychecks. There is a really big company called, um. I still have it on my phone. From here, it's called
+
+[John]
+Paycom. Yeah, I've used pacom
+
+[Ramon]
+Is not just payroll. They do a lot of stuff. Yeah, that's why your organization grows. That's a really good company to use. They come with big company we use. They come at Burning Man to handle onboards. They cover. They cover everything they, it's not just we had. We had.
+
+[John]
+Seasonal workers in my
+
+[Ramon]
+Department. Yeah, that's what you use this for. Because, like you're scheduling on it. Well, there's payroll. Funny that we didn't use it for scheduling everything else, though. So, for payroll, we use them on board and off-boarding. You can like documentations, 401K stuff, so it's just it's what works best for your organization. You have one small little spot like five, like, or like 10 employees. Home base is plenty unless you decided to start doing like 401k stuff and everything. Um, then you just look for who best fits your needs and make sure the price is right because those companies do charge per like when you do per payroll. They charge for processing and.
+
+[Ramon]
+Give them the information, and then it's direct deposit. Our last is requesting an actual physical checks. It's always like direct deposit, and it's just all automatic.
+
+[John]
+So, what do you? What do you like about the current system that we're using for all this stuff?
+
+[Ramon]
+Um, I don't know if I light or dislike it. I mean, we've been having kind of issues with Paycom, honestly getting the information in there. Um, is it paycom, you mean paychecks? Sorry, I just yeah,
+
+[John]
+Not just for payroll. I mean, like, like the, the scheduling time tracking payroll, like the whole network of like getting hours from one place or another, making sure everything.
+
+[Ramon]
+Yeah, what I like about it, um, I mean, it works. It's, you know, that's, that's, that's. That's. There's nothing really to as long as it's working. You're getting the information where you needed to, you're getting it where it needs to go, and it's timely, and it's consistent then.
+
+[Ramon]
+I would it'd be nice to have one kind of one. Like, One-Stop shop situation where, like it'd be nice if toast payroll was like, better. Because then we could just have it all in one space in one place, so they have, like, they have a scheduling thing, too. You could do it all with them, but they're pretty expensive. So everything you add on, they charge an extra whatever every month. And that's pretty common with it. You know, they were really robust organization. It's not. Oh, it's just not. Again, it depends how much money you're making, and you have to like balance.
+
+[Ramon]
+You know? I want to look. What's the, what's the word I'm looking for balance, like, peace of mind, and just efficiency? With what you wanna what you're paying so? What you're willing to spend for, like, that peace of mind. So, if it's like, super efficient, and you don't have to think about it very much, then it's worth it money-wise. You know? But if it's if it still takes, yeah, it takes a long time. It's a pain in the butt and you're still paying. It's just like, that's there's no, you might as well do it yourself, right? So, but if it's that there, the company's you know on point?
+
+[Ramon]
+That's what you're. That's what you want to look for. It's like, it's that balance. I'm like, cool. Just frees up my time to do other things now. Because this company is handling this, all I have to do is give them numbers again. It's great for a small business because it's usually one person that runs it, one or two people, and they have a lot going on. So, they want to, you know, you want things to work as efficiently as possible for the least amount of money?
+
+[John]
+As possible, so.
+
+[Ramon]
+Again, there's no perfect system. I, the cheapest, is doing it yourself. Obviously, like all these things that exist, all the information is out there. You can do it all yourself. It's not even that difficult. It's just very time consuming. And then, what happens if, like, you know? If one person's handling all this, or if they get sick, or you know, they die, you know, then. It's like, how are they, like, misinformation, shit's all like? Do you know it's keeping it to themselves and having to share that information? So now, it's like, what are you gonna do so if you have these companies that are doing this for you?
+
+[Ramon]
+That's another good reason to have another like an organization doing things. So, at least you could be like call them up or something, like, hey, you know, this person's sick, and we need to do payroll, like how, how's it going? And you can kind of walk through it that way. But yeah, so that's, that's the cheapest way to do it, but it's not. If you're trying to run a serious business that you're gonna have to use, you know some kind of outside? You know, program, or or business to help you?
+
+[John]
+How do you differentiate, like? This was a serious business. I suppose, or from. That's a
+
+[Ramon]
+Good question. Actually, it's a
+
+[John]
+Serious business.
+
+[Ramon]
+Um, I'd like it to be. I mean, if you're making money. It's a serious business, I guess, but for me, a serious business. The business job. Is to make money. Like, that's, that's there's like, just, you know, people were, like, oh, you know, there's like an evil business and good business? I'm like, a business's job is to make money, like. And if you're not trying to grow every year and make more money and get better at what you're doing, then you're not serious if you're just in business to like, just kind of okay, we're just gonna make the same all the time and.
+
+[Ramon]
+Content with what it is. Then, you know, and I'm saying that's necessarily bad, but I wouldn't say you're serious. A serious business, like, you make money, you know, your boys are happy. Your guests are happy, and you're always trying to do a better job of those things. So, you know, when you're looking to the future, though. How do you you think about your projections you think about, like, okay, if you have one good year. Some people are, like, oh cool, like we made it.
+
+[Ramon]
+Year, and then everyone starts buying houses and all, like, they're certainly been. Others, like, quit their jobs and all of a sudden one. One small restaurant is paying for like eight people to not work, which is not sustainable. So, stuff like that. So, if you get to think in those terms of like how much money this place is making? Have to think that this place is pain. You worked here. Y'all was, like, like this? You know, this business is paying your bills. And paying my bills and paying his bills and paying his own bills. So, even if we're making a million dollars a year, that's not a lot of money when you when you start have to pay. You take an account all the things you have to pay for it.
+
+[Ramon]
+Playing for those things and a project. Okay, well, how can we make more of this money? What can we do? You know when things are slow, and you know, are we putting your money aside for those, like, kind of rainy days? For me, that's so serious. Business, like a physically sound and like, just well structured Foundation. There's only thing so many things you can control, but you can control how you plan. For things you can't control the weather. You can't control how busy it's going to get, but you can. You can kind of navigate, and you know, you can have a plan for all those scenarios that are kind of variables that you don't, you know, that exists in life with everything, so you can only plan so far, but you should be planning and have a good idea, you know?
+
+[Xinya]
+How many people do you have in Beltown exploration?
+
+[Ramon]
+Oh, and here, yeah. Employees to see one, two, one. Yeah, say about. Seven employees. Yeah,
+
+[Xinya]
+Let me discover their, uh, like timeline, of the seven people I don't schedule
+
+[Ramon]
+It. Scheduling, so our? I guess I heard this is the
+
+[Speaker 4]
+Bar manager? Well, there's also we also have three in the kitchen, right, and reschedules
+
+[Ramon]
+Them? Yeah,
+
+[John]
+So Kyle just
+
+[Ramon]
+Schedules the bar, but
+
+[John]
+Like overall, a
+
+[John]
+Total number of employees.
+
+[Ramon]
+Is it 10 people
+
+[John]
+10? Yeah. Is split between recent and Kyle.
+
+[Ramon]
+Yeah, so, yeah, so the the chef schedules his own people, Kyle schedules, the server, and the bar staff.
+
+[John]
+What? What? Like, are there any issues that we have with the current system? Like, is it taking too much time? Is it not good, like?
+
+[Ramon]
+I don't think so, I mean. My dad, yeah, I, I, you'd have to ask, Kyle, I don't think there's any issues, I think.
+
+[Ramon]
+I. Well, there was an issue against. Oh yes, I guess there was an issue before we were using home base. It was just done by, like, like spreadsheets or. That so? Which wasn't efficient. That's why I mentioned, like, maybe use this this program, because, like everyone can get it on their phone, and everyone can be like, you know, aware of the schedule. I don't know if he likes it or not. I haven't heard anything him say anything negative about it.
+
+[Ramon]
+I mean, there's like, I guess, because I was thinking about, like,
+
+[John]
+There's challenges with. The events, and like scheduling planning for those I've
+
+[Ramon]
+Found. I think there's less of the scheduling. I think that's that's less of a like. Issue in that that is moral communication issue. That's fair, I
+
+[John]
+Mean, I think the communication is a huge part of
+
+[Ramon]
+That. So, yeah, that's outside of, like, using any kind of program again. If you're not communicating and with your team.
+
+[John]
+I think that I think that when we, when we talk about Information Systems, I think the communication is a huge part of that, right, because knowledge lives in someone's head and it becomes information once it leaves someone's head. So making sure that all the information is available to people that needs it that need. It
+
+[Ramon]
+Is a big part
+
+[John]
+Of what we're trying to figure out
+
+[Xinya]
+The whole passport at the time to become maker. Today, they call the manager
+
+[Ramon]
+Text. Yeah, well, yeah, calling out the day of is, I mean, things happen. People get sick, ideally, be, you know, you'd give as much time as possible. But yeah, it's just you reach out to again. You try to get your shift covered?
+
+[Ramon]
+Gonna be, like, hey, I got something came up, and you know you try to get it covered, but if someone people aren't responding and you can't, and you have to tell. Yeah, you need to reach out to your manager, whoever your direct manager is. Um, and let them know what's going on so we can plan accordingly, so we don't
+
+[Xinya]
+Know whether they're reaching out to article or if there has a success story because their ships cover, you don't know
+
+[Ramon]
+If they cover it then. Yeah, you definitely communicate what you've you've done. And if you can, you still communicate with management and say, hey, I'm not going to be here. But so-and-so was covering my shift. There's
+
+[Xinya]
+No, like, place like public, or to communicate the shifts
+
+[Ramon]
+Not here. But people use slack channels a lot in businesses. I, I like to keep things as. Basic as possible. I've worked in places where we had our slack Channel, but then we'd also would text, and then. So, my thing is, just if you have a system for it, and we all agree to that system, then you know to look there. What I don't like is having we have a WhatsApp Channel, and we have a flat Channel, and we're also doing fruit texts like there's like, we have home-based. We have home-based time off requests. We also have the Whiteboard
+
+[John]
+Back there and write things on,
+
+[Ramon]
+So there's no real control,
+
+[John]
+Right? So that's
+
+[Ramon]
+Where you know, you got to come in and be, like, okay, let's pick a system. We're all gonna agree on this system. That's, that's.
+
+[Ramon]
+The where we say we're doing things so that? I think lots of organizations have issues that way, and I think lots of places and last place I worked was kind of like that. We started having like too many ways to, you know, get information. And
+
+[Xinya]
+No single songs.
+
+[Ramon]
+Well, yeah, so it's, it's really important to like, you know, again, as that kind of goes back to what I was saying about having a nice, a really good foundation as a business, because then you know, once I was on board like, this is how we do things. Things, but this is how we do things here and then you can train those people on those systems because that's really, really. The most important thing. There's a million systems, but you have to train people on whatever you're doing and then stick with that. So, they understand how to do it and can teach someone else how to do it.
+
+[Ramon]
+Okay, well, we use this. Let's actually break it down because people have to like get used to a new way of doing things, because especially. You know, because how long you were somewhere else or your age, or you know it's, you have to make sure when you bring someone on that. They're right how they access information and how they learn and how they operate in that organization that everyone's doing it the same, and they're very clear to how it's supposed to be done. You know, even like how to ask questions about this, or if you have any issues with how we do things, here's a way to go about that. You know, you won't just like, not do it, or I'm gonna switch to this. Um, yeah.
+
+[John]
+Approve or refine like our people management practices, not just like technical, not just like software tools, but like the way we go about things as a whole. Um, what would be kind of the main things that you'd like to improve?
+
+[Ramon]
+I think a monthly meeting would be nice. Make sure everyone's on the same page.
+
+[Ramon]
+Communication is kind of tough here, sometimes especially surrounding stuff like events like, what's coming down the line? Uh, if we have like a, you know, big party come in? A lot of times, it's like kind of the last minute. And sometimes it's it's unavoidable. But usually, it's not usually. It is avoidable, so I think we could be better about that. Just thinking about the future of, like, okay. You know, here's what. Here's a calendar for the, you know, for the month of Easter the next month, and here's what's coming down to ice. We used to do kind of.
+
+[Ramon]
+Pre-Shifts. One place to still do that, like before you kind of get going to team it together, and you kind of let everyone know what's like, what to expect on that evening? Doesn't work really well here, because usually there's this one bartender opening to start. So it wouldn't make times to have a pre-shift with, like, you know? But the team because the team is one person to start. Another thing we should be doing and we don't do here is, uh, is a bar log at the end of the night. Um, again. It's very specific to the restaurant industry is to just have a running log and every night you just kind of write in.
+
+[Ramon]
+It could be like nothing happened today. Yeah, you know, it was slow. But it's a good way to kind of keep track if something did happen. You know, someone cut themselves or, I guess, was acting a certain way. And, you know?
+
+[John]
+Um. It's a good way to kind of even go back and see, like, what happened? I
+
+[Ramon]
+Used to do one, like online. It was just like a yeah, just a daily long, like, here's what. Here's here's, how the day went. Ways for managers to kind of like check in and see what happened or what didn't happen. Forgot about that.
+
+[John]
+I used to have to fill one of those out. Yeah, it's pretty
+
+[Ramon]
+Common.
+
+[Xinya]
+I want it to melt your laptop.
+
+[Speaker 4]
+It's all
+
+[John]
+Right. I got this from an old tech company, so I never paid for it.
+
+[Xinya]
+It's a thing.
+
+[Ramon]
+I don't care. So again, but that's. And that's, that's a small thing, but it's just another way to kind of give good information. And it kind of helps you be, like, hey, how tonight? How was it tonight, you know, instead of someone asking the next day, you're like, I don't know it was or something, or someone that comes back and complains. I've experienced that. Where they, they know, something just happened with a guest. And they didn't. They weren't happy. And the next day, they just, you know. Come after you or they go and do leave a review. So if you have that kind of, if you can beat them to it. Like, yeah, tonight you guys came in. We asked them not to do X, Y, and Z, but they did it anyways, and so I asked him to leave because of these reasons.
+
+[Ramon]
+Have your cover in that sense, so someone does mention that, like, what's going on with this guests? You're, like, oh well, it's in the lock. The manager, or whoever it can be. Where is responsible for looking at those logs can? Be prepared just in case something does happen. Like, well, actually, here's what, yeah. Here's what I'm seeing, you know? Um, but again, I'm I'm, I'm big on just keeping things as straightforward and simple as possible, you know? I'm also big on asking the team like, well, how do you like to communicate, like how I am and how you communicate might be very different. I guarantee it's probably very different. You know, you have to tell me something kind of like once. I'm, like, okay, cool, you know, I got it.
+
+[Ramon]
+A little more guidance you know, and
+
+[John]
+Kind of like, like, the uncountable, the uncountable number of group chats with varying numbers of employees that we have to sift here to find these operation. Yeah,
+
+[Ramon]
+Yeah, so? When I started somewhere, I'm like, well, how do you like to be communicated with, like, do you need micromanagement because they need it? So, yeah, you know what I like, when people are actually kind of like? Rights or no, no, I? You know, so tell me what needs to be done. And then I'll do that. Um, I'm already a hands off. That's my preferred approach. He's bringing hands off, like, here's the job. Job, and I'll try to help you do that job. As you know, as good as possible, and if you have an issue with how some of these parameters, then let's talk about it. I'm a very great. I'm a very like open door.
+
+[Ramon]
+So, yeah. So that's, that's that's for me. That's where it kind of starts. I'm right, I want to keep it as simple as possible, but I wanted to make sure that we've had the conversation. Go, so I understand how you operate because it's just any business you're working with. You're working with people, and then people are different. Every single person is different. Everyone has emotions and. Things going on in their lives, so it's important to always think about that. The systems systems are just, they're just tools. But the real. The most important thing is the people that you're interacting with and how they use those tools and how you communicate, you know, and how I communicate with you might not work for you, or might not be clear.
+
+[Ramon]
+So again, and that goes back to the foundation. Of any organization. If you're doing it right, that's how you should do it.
+
+[Speaker 5]
+Give your employees as much.
+
+[Ramon]
+You know? As much help as they need as much resource as they need, but also don't overwhelm them. Just be, like, hey, here's what it is, you know? I'm available if you have questions.
+
+[John]
+You know? Or even suggestions. Say it's a more efficient way to be open to change. Be open to Pivot.
+
+[Ramon]
+A
+
+[Xinya]
+Profession that you are, you know, Neko? So how, before you get there, so you send the home home base
+
+[Ramon]
+They get published on home base. Yeah, they download it
+
+[Ramon]
+Or online. You have a it's a free gift for free. You have a camera online or you're on your phone.
+
+[Ramon]
+Uh, and then as soon as it's updated
+
+[Xinya]
+Another stats as before, so can they apply for adjustment of ships?
+
+[Ramon]
+So, yeah, you can with most, um, here. I'll follow that for you. I think all this. How
+
+[Xinya]
+Many hours do you need to train people to use this system? This is easy to train people.
+
+[Ramon]
+It's fairly simple because you don't really have to do anything. You have to just have to read it,
+
+[Xinya]
+Read it, right.
+
+[Ramon]
+Just go to your schedule and hold on. I change now. Let's go to the schedule there and there it is. This gives you. It gives you who's working those days. Yeah,
+
+[Xinya]
+Yeah, right,
+
+[Ramon]
+And this is the free version. Um, and I don't know how much they allow you to do so. Like, for hospitals, for instance, you can like block out days, like when you get hire, you can be like, I can't work on these days. Exactly. So okay,
+
+[Xinya]
+You can block
+
+[Ramon]
+Yeah, so you can just block your day, so someone can't schedule you, but you. I mean,
+
+[John]
+There's a difference in availability and time off. Well,
+
+[Ramon]
+Yeah, so, yeah, you can say.
+
+[John]
+Also, you can also, they can still schedule you outside. Your killability is the funny part I
+
+[Ramon]
+Have, because on hot skills you can't, you can let me check my home base because I have my availability set to like, uh. Like 850 on Thursdays, because I have a class that roads late. Let me make sure I actually did that, and maybe I didn't. Yeah, and I still get scheduled at 8, 30.
+
+[Ramon]
+That's funny, and I think Kyle does it, and I'm like, every, every time I set every time I text Kyle, and I'm like, I'll be in somewhere between 8, 30, and 9, and he's, like, okay, every time. And I'm like, why do I keep getting scared of 8, 30.
+
+[Ramon]
+My class lets out at 8, 20. I can't get from change your availability and, and uh, and it's different. It might be like slightly different, I know, like Costco's, you just can't do it, or if you try, it gives you anything like, alert, right. Installation person says they can't do it. So, it's on you if you still schedule it, but
+
+[Xinya]
+So it Sports ships releasing, walking, but no, like, trading
+
+[Ramon]
+Communication. I mean, there, there is a messaging tool, but we don't use it.
+
+[Xinya]
+Oh, okay, okay.
+
+[Ramon]
+Yeah, every skeleton scheduling tool will have that ability where you can, like, request a day. Or someone's like, hey, I need a cover. Um, again, it might be free versus paid. You get the more things unlocked. Where you can like, dig in and be like, you know, you can, you can. You can put it on the schedule. Like, hey, I'm gonna be gone. And you can, like, make shift available? And I think we'll see that and being, like, oh yeah, I'll do this one. But again. You're relying on people looking at the they have to be looking at the app. Yes, right? So, it helps do that. That's the official, like the last place I worked that was like the efficient way to do, like, yeah, one day off.
+
+[Ramon]
+Make yourself available, like, do the thing like, it's on you. Um.
+
+[Speaker 6]
+But some people would do is it will still be like, oh, by the way,
+
+[Ramon]
+And I'd be like, oh, where is it?
+
+[Speaker 7]
+Like,
+
+[Ramon]
+Where did you didn't, you know? And that's where it gets kind of tricky, because I've I'm the way I would approach people requests off. I'm assuming you're not going to be here on the days you say, you're not gonna be. Legally, I can be like, sorry, we have in our policy. You have to give us as much time you didn't do that. You can't take this trip, and that's a dumb way to be because I would never. It might be, I would never assume. Focus this guy.
+
+[Ramon]
+Yo!
+
+[Ramon]
+Guys the story? Thank you.
+
+[Speaker 8]
+Well,
+
+[John]
+Half of the staff is in this bar where no one's like who the fuck is this guy.
+
+[Ramon]
+Sorry. So, I
+
+[John]
+Guess. You were saying that a lot of the balance between using
+
+[John]
+A like a paid all-in-one system versus kind of doing things ad hoc and individually has to do with how much time it takes and how there's how serious the business is. There's also. At what point that time ceases to make sense to spend, um, right? And I
+
+[Ramon]
+Mean,
+
+[John]
+Where do you think, because where do you think this business kind of Falls in that scale? Do you think it makes sense for us to be doing everything individually right now, especially. No,
+
+[Ramon]
+We should have. We should have some tools we have some, but we should be using using them better. In my opinion. Um. Like, we don't have like a designated like account. Like, I've worked for a place where a guy just had, like, you know, he, he? Had an accountant on retainer basically, and that was. That was, her sole job was to kind of deal with the payroll stuff and. P, l's, and stuff like that, and they're not scheduling. But, like, you know, those types of things like payroll, because just you know, takes a lot of time. And she was like a CPA and.
+
+[Ramon]
+That was kind of our expertise. So, if you have someone like that, then they handle it, and they might use these some tools and pay for those tools. And for this person again, it's just trying to run an efficient, efficient business. And you don't want to waste time. Long time, or you know someone else's time, so I think here it would benefit to have, you know? Especially payroll, I think, to get that really sorted out. Yeah, basically, automatic. I mean, you still have to submit hours, and someone has to do that. You gotta look at the hours and submit them. That's never gonna go away, which is what it is.
+
+[Ramon]
+Because you want to make sure you're you know what things happen. People clock in later. Forget to clock out, you know? So you just want to go through and embed all those things and and fix those things, um. Right. Ideally, someone should be looking at the hours every night. Like, every day, the clock ends because it's illegal to change someone. Hours, even if you know for a fact. Yeah, you didn't work before I reach out, like, hey, I'm changing this to. When did you actually leave? Yeah, so that's why it's good to kind of do it every night.
+
+[Ramon]
+Make sure that way you're not surprised at the end of. Like, when it's payroll, you're like, wait, what are these hours? You know, it's just way harder. Yeah, I mean, it's still a people business every every business. It's like only as good as you know. The tools are only as good as the people that are using them. Um, but yeah, we should definitely have a more.
+
+[Ramon]
+I think I think scheduling were doing pretty good Advance wise. We could be doing better with that for sure. But payroll. I'd say, since I've been here, it seems to kind of like. We're doing it this way, then we're doing it this way. You know, like, I just don't want there to be any kind of anxiety around people getting paid. No one wants that, like, people want to, especially if they, you know, they showed up and did their work, and they should get paid. Half the time they're supposed to get paid, and it shouldn't be a weird thing, you know. Again, things happen, especially, was a smaller business. Sometimes, you know, mistakes happen, but it should be. That should be.
+
+[Ramon]
+Like, not the rule. So, and what helps with that are just systems in place like, this is what it is. This is how we do it. Again, I'm gonna keep going back to it, but it's just laying a foundation for your business, like laying. I found it. Whatever you do like, have that Foundation. This is how we do it. This is our yeah, makes everything easy. Yeah,
+
+[Xinya]
+About the daily like, okay, holding chat. Do you have any, like, final bullshit, like a brickle size? What are your Hawaii and managing, like, do
+
+[Ramon]
+You mean like the daily log? Yeah,
+
+[Xinya]
+We're gonna have a place to show the exact.
+
+[Speaker 4]
+Hours are in hours are in toast, which we can access, I believe. Yeah,
+
+[Ramon]
+So I
+
+[John]
+Can go in and look at my own hours in the toast portal.
+
+[Ramon]
+Yeah, the hours there's a there's an asset. There's one app for scheduling just home base, and there's another app called my toast. Yeah, so toast is, uh, it's the point of sale system that we use and into. They have a they have a clock unit system where? Like when someone comes in, they're clocking at. Their little console here. And then I'll clock out at the end of the shift as well, and then just keeps tracking.
+
+[Xinya]
+Hours in toast will be connected with a paycheck, so
+
+[Ramon]
+Here's, here's my last week, and I can see my schedule. Yeah, I did not. Yeah, it shows you the hours you worked and then see, and I can also see that I actually, I forgot to clock out on Sunday.
+
+[Speaker 6]
+Do you take those hours and then when you so the other company is?
+
+[Speaker 8]
+Hey
+
+[Speaker 6]
+James. Compile those hours, and then you have, you know,
+
+[Ramon]
+Google, John Thomas? We have Kyle a law, you know, it's like, and you're, like, okay, there's two. That's how much they work, how much they work design is like, you know, here are the hours. Here are the tips. And then, how are you set it up with that company, then they just basically? Direct deposit. Pay all the taxes you're mostly using a company like that, because when it's time for tax season, they're generating W-2s. Because as that can be a pain in the butt too. Like, again, there's a lot of rules surrounding that. And it's nice to have a company that says that's what they do.
+
+[Ramon]
+You know, especially because, like rules, change all the time, so it's just like, so these guys do, and it's good for your own. Like, you know, um, like liability? If something does go way wrong, you can kind of like throw them under the bus. Yeah, I was, like, no? Well, we've been giving information to paychecks, and they haven't been doing this, and then you can be like you need to, you know you can kind of like, instead of you having to be liable for? Someone else's liable for that mistake. So, in the event that we were looking to
+
+[John]
+Shift some step around? What sort of what, what sort of how much budget or resources? Do you think that we have available for systems like a lot of stuff is free or minimal, like, is it just a matter of taking or existing things and improving the way we're using them. Yeah, because we have the
+
+[Ramon]
+We have the tools, this is how we use them and.
+
+[Ramon]
+Well, light period over period. Again, it's just very, you know? Where you put that money, but? I wouldn't add anything else right now. Yeah, we use toes. We stopped using their payroll, so we stopped paying for that. So, that's already saving some money there. And now, we're using, hmm,
+
+[Xinya]
+And Post Plus.
+
+[Ramon]
+Toast is. They're mostly a point of sale system, but they do. They offer a ton of other things. One of those other things is payroll. Well, they process it for you. We don't use theirs anymore. Just the point of sales and the clocking in and clocking in we, don't they? So they take fees, so they after every night. So basically, we'll serve customers. And it's all getting rang in. And then. We close out the checks. Which is basically is basically kind of validating what you got. It's like so, and now, because of like touchless stuff, people are kind of closing checks out right away because they're adding their tip in whatever.
+
+[Ramon]
+It was a paper someone like, sign with a credit card. Then, at the end, you go through those checks, and you add the tip, and
+
+[Speaker 5]
+Then you close it all out. And then you want, like it's called. It happens automatically with a batching
+
+[Ramon]
+Process. And basically tells us compiling all that information and saying, okay, you made this much money. And then they have fees, whatever that percentage is. So they take out their fees, and they put the rest of the money into your bank every night, every night, of course. Yeah, every yeah. Every year, there's like credit card fees, and so they have a fee for whatever, whatever percentage it is. They just charge for the convenience again. You could do this all your own. You can accept only cash if you wanted to. Or like they had they used to have the old school like credit card like machines like no one wants to do that. But yeah, so it's super convenient. And then you just get money directly into your bank every night.
+
+[Ramon]
+Every day when it gets deposited every business day. Um, but yeah, that's how pretty much how it goes. And then, yeah, they don't. So we do pay a monthly fee, but it's it's for. Integrations. So they do stuff like GrubHub doordash.
+
+[John]
+What's the other one? Oh, this is just the doordash iteration. That's all
+
+[Ramon]
+We're using, but we, what? Yeah, ubereats. So we have those three things activated. So, basically, if we want to do GrubHub and ubereats, we could, uh. Get the orders, and they would process through toast. So, it's kind of tracking it as well. So, we paid like 82 bucks a month just to have that stuff active, but outside of that, they don't pay anything a month, just just the fees that they charge with these these, uh tools, though. There's always like an initial, so if you just started a business and you're, like, okay, we're going to use toast. You pay for them to like, you know, if they give you like a tablet, and you're paying for that, and then you pay for the actual program, and then from that.
+
+[Ramon]
+Choose some of that because they have like reservations stuff. You know, again, payroll stuff. So, unless you're choosing these little add-ons, you're not paying any monthly anything that's not the initial, like, setup, and you just pay their their fees, which which were plenty. They're doing just fine toast.
+
+[Xinya]
+How much do we pay for the paychecks. That's okay,
+
+[Ramon]
+I don't know, I get. I think that is also, it's her. It's a percentage, because yeah, they. It's a percentage, uh, per payroll processing. They have, like, a certain fee. Yeah, so we don't pay them monthly.
+
+[Ramon]
+Once they process payroll, we pay whatever they charge for that, and I don't actually don't have access to that information. It's reasonable again for the convenience. Uh, I guess it's more reasonable, the more people you have. Yeah, the more people you have, the more reasonable it
+
+[John]
+Gets to have. A company do it for you,
+
+[Ramon]
+Like me. Personally, if I just started with starting off, I would. I would just do payroll. I would because I like to learn, know exactly how, how it works. That way. When I do look for a company, I can see if something's just kind of, you know,
+
+[Speaker 5]
+What's so worthy is it's kind of? Where they put, where they couch something, and like, super. Well, they're kind of like,
+
+[Ramon]
+They're just kind of adding, like, yeah, it's kind of, like, uh, there's no real value Ed. Yeah, like, just a very specific word. Sorry, I'm just kind of it's. We process blah, blah, blah, bl. It's like, yeah, you just, you're just floating it. It's bloating, you're just bloated. If it's a bloated prop like product, yeah, you know,
+
+[John]
+Like, a lot
+
+[Ramon]
+Of, like, if it's like, you're just just to make more money. You're saying this thing is, and if I know how to do it. Like, well, actually, this is not. I don't need you to do these things, so that's when you look for a company. And just so, being informed helps you. Decision when you open you when you're ready to kind of get those. Add those uh programs or systems to your organization, but I'd say always know how they work. At the beginning, you know, it was just for like, a month where you're like. No, no, I processed payroll
+
+[John]
+For a month, and I understand how it works. But now, I'm gonna let someone else deal with it because it's taking too much of my time.
+
+[Ramon]
+Five to ten minutes. Anything else you want to cover?
+
+[Xinya]
+Oh,
+
+[Speaker 9]
+You have several questions. Yeah, some of these,
+
+[Xinya]
+I mean,
+
+[John]
+I think I think technical visibility and operational feasibility isn't necessarily relevant. I might be with John at some point, but maybe by
+
+[Ramon]
+Myself. It's fair.
+
+[John]
+Because some of this stuff is like, we have a we have a we have a very robust set of questions, things like, um, what would you be interesting? What? What are your expectations in terms of technical complexity and ease of use for systems that we have?
+
+[Ramon]
+My expectations. I expect them to be as intuitive as possible. Intuitive intuitiveness is like the most important, so this is actually something. Um. That actually buzzed me with a lot of, uh? Like systems. For any industry so? If someone creates a tool for the restaurant industry or a bar, whoever's doing that should have some kind of background or understand how these these organizations actually work, not something you can look up online or like, oh, is the rest restaurant you buy, you know, you sell food and you sell drinks and you make money. And that's what it is.
+
+[Ramon]
+So much more to it. So, at the very least, talk to someone or consult with someone that works in these who would actually use these systems. Um, years ago, a friend of mine, Nikki. She was actually doing, helping someone build an app. And when you build an app if you're doing it right, you know you meet with people who actually would be using the app and then you kind of like, it's, like, wait, well, what's good about this? What's bad about this? It was like they had gotten so far. I was like, I wouldn't use this at all. Like, there's no point to it, like all these things that you're trying to make easier, like, or the like, the?
+
+[Ramon]
+More that this industry is still very old school, meaning that it's a lot of it's just talking to someone. Like with reps, like when you make your orders, it's still faster to be like, hey, or hey, I need four cases of this blah, blah, blah, and then you just. And they just handled it. Yes, there are things you can do online. But then, yeah, Southern
+
+[John]
+A W have web portals. Some people
+
+[Ramon]
+Use them, but it's better to use your wrap because a there's a rep assigned to every account they get paid, no matter what, no matter how you order. And there will tell you what you have if there's some kind of deals to be made, or there's some kind of like case breaks.
+
+[Ramon]
+Okay, so it's a very, it's a very. This is a it's a people business. You know, doesn't matter how advanced technologically you can do stuff, it's still a people business. So, so that's a great question, because it's like I want things to be intuitive and to actually make sense for the industry. It's like make it as easy as possible, you know, like, and as simple as possible. And, and just just like we just research the industry, you're actually trying to build a tool for because, like, I worked a lot of like, you know, programmers and Tech people. And, like how those brains work, it makes sense in those brains. Like, oh yeah, this makes total sense to do these things and how you would look for something and whatever patterns I use and their UI makes sense for them.
+
+[Ramon]
+Like, oh, a programmer, like they wrote they. This makes sense for them. They wrote this because this is how they operate. No one else operates, like that, you know, in this industry. I'm actually using you my job. I used to like, deal like, I kind of like technical and a technical writer stance, you know, like, like, easily translated to people like me, and that don't can't? Don't think, like, you think, like, they're thinking on a different way. It's like Engineers versus like, Architects, you know, it's like. In our text. Like, yeah, we're into all these things like.
+
+[Ramon]
+That, you know, that's not how weight is attributed, but? Um, so, yeah, my expectations are just. You'll know right away if someone is just making kind of a bullshit tool just to make some money. So, ease of use? Uh, pertinent to the industry. Whatever industry they're in, like, whatever the system is for, make sure it makes sense for that industry. Um. Yo, yeah, intuitiveness.
+
+[Ramon]
+What else? Maybe obviously price again, making sure it's priced correctly for the industry. You know? You can sell, like Salesforce type level, Enterprise stuff to big companies like, but a restaurant has no need for that, and they can't afford these things. You know, it doesn't matter how good you can you, you sell it to somebody. You know, it's like, I don't actually need these things. So, yeah, that's the that was my expectations always, just doesn't make sense. Did you actually research?
+
+[John]
+How do you think of a shift in the usage of the current systems would change the current day-to-day operations? Ideally, a shift you're saying that, like, I'd like to use the current rules better. How do you think that sort of change would impact the way we operate an in-day basis,
+
+[Ramon]
+Um, payment wise. Still, just a lot less anxiety around getting paid. Um, for the team. Um. Uh, yeah, I think that's just no one likes to get blindsided with. You know, you're expecting something in a certain day and then all of a sudden, it's just a whole different thing.
+
+[Xinya]
+So again, that
+
+[Ramon]
+Just comes with, you know, if, uh, if you someone's like planning a big party, and like, whoever is communicating with this group doesn't communicate to? Their team. And hey, this could be a thing, or it is a thing. It's kind of shitty when I was, like, oh yeah, cool. Tomorrow, we have 40 people coming in. And you know? And then you're like, have to be prepared for that. So it's again, it's just communication is. Communication is key, so if you actually have a nice calendar that everyone's on this calendar and you're, like, hey, we have a pending event that might happen, you know, and it's not easy to do. Just stay on top of things like that. It's, you know, everything you do, just adds more work to your life, you know. And then, it's also hard to just hire a person that that's what they do.
+
+[Ramon]
+The best person, that's all they did. We had two people on their bed. They just handled all that stuff, and they'd be the communication. Hey, we have something pending. But, you know, all I would have to do is like run a deposit, but now it's on the schedule. Like, okay, I know this might happen on this date. And we do like, you know, four week lead times like we would demand that essentially like, for me, he was, like, no, we do things four weeks up, like. Creatures. That's how they did it.
+
+[Xinya]
+You
+
+[Ramon]
+Know, it's just. Yeah, um? I think that's how I think help, not just the team, but just. I mean, the entire crew, like the person that's dealing with that, that makes your life easier, too. If you're putting a little bit more money, more work, not money, more work. Uh, on the front end of getting those systems in place, and like. It just gives you peace of mind. And then, when you hire someone like, hey, I'm done with this, you know? Say, I'm the owner of this place, and for now, it's me. I'm like, okay, I'm getting all the events ready. I'm making all the you know, buildings, relationships, and this is, I've created a system. This is how I do it.
+
+[Ramon]
+When I eventually, I'm like, okay, now I want to hire someone, and I'll be like this is how I do this. Do this thing, the way I just you know. And if you want to build on it, great. But you
+
+[Speaker 5]
+Have a foundation I
+
+[Ramon]
+Have a foundation. Yeah, again, you have a foundation of how you do it, and then that's what you can always like, I hate when places. And that's most organizations like one person like does so much for, you know, accompanying, and then they quit. Or they get fired, or they, you know, again, something happens. And all of a sudden, it's like, wait.
+
+[John]
+So, we started when I started here. I remember Andrew and Peter and Brew handled. Like all the inventory tracking and scheduling and stuff, and then, like, we kept like running out of shit and John's, like, how do we want to get more things? I'm,
+
+[Ramon]
+Like, yeah, where's the list? Where's the list of where we order from, you know, like, that's huge? And, like, I'm big on that. I always think of, like. I like to be replaceable. Because I can't move on if I can't be replaced. So it's like, or if I'm like, gonna go on vacation. Like, I'm like, hey. Oh yeah, JT knows this shit, you know? Okay, and then. Not just training wise, but also have a document say, like, hey, it's in this folder. Here's how we do all these things. I've also trained people to do it, but even if I didn't so I can go in these folders and like, figure it out.
+
+[Ramon]
+And then you know you still need me to help you out, you know? Hit me up.
+
+[John]
+But, that's yeah. What do you want to cover?
+
+[Xinya]
+Oh, I just want, you know, have you ever suffered from any students from the page, like you, mentions payment wise, um, you want to really stay and diet taste. Have you ever had any
+
+[Ramon]
+Anxiety from getting paid. Yes, I'm
+
+[Xinya]
+Getting paid. Do you like, suffer from my inbox from the system, so you,
+
+[Ramon]
+Oh, um?
+
+[Ramon]
+Not here. I'm on a contract basis here, so I'm not on the payroll. Like, I do like more of a W-9 situation because I'm an independent contractor. But. It happened in a last place I've worked. It was. But it's luckily they rectified it pretty quickly. You know, again, mistakes happen. And. Didn't get paid, so I didn't have any anxiety until I didn't have any money, and I'd come through and then. You know, uh, it was minimal because it was again. We had a pretty good system in place, so I knew we would talk to you. I was, like, hey, this happens.
+
+[Ramon]
+I didn't get paid, you know? And it's literally like the next day. They're like, oh, whoops, sorry. And then they, they tell you how to how to fix it. So here, no, not so much again because I'm a contractor. So I have a set. I have a set wage, and that's what I get paid. On. Yeah.
+
+[Xinya]
+My fellow question is, uh, can you give me a percentage like how many, many questions in install your schedule? Me like, you don't have, like people eat enough, or do you have too many people
+
+[Ramon]
+On the schedule?
+
+[Xinya]
+Oh no,
+
+[Ramon]
+I mean, I think we have. I think we have a I think I would like that, maybe like one more person, but again in a in a bar restaurant. You don't want to have too many people,
+
+[Xinya]
+Because if you
+
+[Ramon]
+Don't have enough shifts to give people, so I think we, I think, right, for now, we have enough. Um. And it, the less people you have on. For every ship, the more those people get paid. So it's very important for those people to be. I'd rather have people that really know what they're doing,
+
+[Xinya]
+And no more know this. Like, exactly, the goal to serve?
+
+[Ramon]
+Yeah, you want to give as much. You want to give really good Hospitality, so sometimes you need more people for that. Um, or is anybody strong people, I think right now? We're good. But if we started being like extremely busy every day, I'd say, yeah. We probably need a second server.
+
+[Xinya]
+How many? How many percentage of this initial you have too many people tonight, or you don't have to? I don't have two left two three people. What's the question
+
+[Ramon]
+What percent
+
+[John]
+Of the time do you feel like you have the exact right number of Staff?
+
+[Ramon]
+Oh, um,
+
+[Xinya]
+Thank you, uh,
+
+[Ramon]
+I. Say like 99 99 of your time. I think we're good. Yeah,
+
+[Xinya]
+But again,
+
+[John]
+We
+
+[Ramon]
+Have some strong people. That's important thing, it's. It really depends on how strong your team is, and we hit everyone here knows how to do their job.
+
+[John]
+And
+
+[Ramon]
+So, yeah. It the only time I don't feel. That is because someone like got sick in last minute or something, and then you're, like, oh, we don't have enough people, and then you know, but if I'm here, if the owner's here we just jump in and help out? So, I'll tell you, I said, okay. 95, I don't know. I mean, that's a hard one for me, because it's like, you know, most of
+
+[John]
+The time. Yeah, most of the
+
+[Ramon]
+Time, we're good.
+
+[Xinya]
+I feel like most of the time your scheduling system functions very well, because most of the time you have, I
+
+[John]
+Mean, I think part of the challenge is that we often don't have two weeks leading time,
+
+[Xinya]
+We often don't
+
+[John]
+Have two weeks later.
+
+[Ramon]
+Yeah, and
+
+[John]
+That's something. Yeah.
+
+[Ramon]
+Doesn't have to be the final schedule you just legally have to have a like two weeks now.
+
+[Xinya]
+It's been
+
+[Ramon]
+In place for I want to say, like, a couple of years now, maybe three years, it's new-ish, that is.
+
+[John]
+That's new. This new one scale, the restaurant industry. Yeah,
+
+[Ramon]
+It's new-ish. Again. Rules like that. It's really hard to enforce those rules. But it's good to adhere to them because all it takes is a employee being like. Complaining. And we're doing a lawsuit, uh, having to like Tom Douglas, you know?
+
+[John]
+We got seen for, like, millions of dollars. It's just like wage stuff, type things, and it wasn't really happening. Like,
+
+[Ramon]
+Kind of, in, you know, I have an inside scoop to it. But on paper, it was like. They're not. They're not following these protocols, you know. So, it's important to like, because you can change it. It's a weird rule, because, like it's just, here's the schedule for two weeks. Within those things, you're like, oh, actually, you know, we don't need you for this day, and I'm gonna move things around. So, it's, I mean, that makes sense.
+
+[John]
+This is something I run into where, like, I'll be trying to schedule, um, an event, or like, take a time to see somebody, and like the schedule is like a week out traditionally, and I have a fixed schedule usually. So, I'm, like, well, I never work on Saturdays, so? Saturday, it should be fine. And then, like, somebody calls out abruptly right before the schedule comes out. And then, like Seattle, comes out and I'm scheduled for Saturday, and I have to call Kyle and be, like, hey, I actually can't work Saturday because I didn't think I had to put a time off because it never works Saturday, and there's just like whole cascading process. Where? Wherein, like, I think, like, do I have to put in time off every time I want to schedule something more than a week and a half out. Like, for, you know, this is like a like, like I could do that, but it places a lot of the burden for managing the scheduling on the workers, whereas if it's through me, if the schedules real.
+
+[John]
+Be like, I don't. I can't schedule something then. And if I do schedule something like that, I'm scheduled not to work. And then it has to change. It gives me a little bit more bargaining power to be, like, hey, like, I was already planning on having that day off, you can't just assign me that day to work. So, it like, there's a balance in terms of, like, where the the expectation of Labor is happening as well, I think?
+
+[Ramon]
+I'm big on, you know? Personal responsibility. Um, but yeah, I mean, you, you know, you work for a place the schedule you should be adhering to, like the scheduling rules, you know, it's two weeks is a rule like, have it scheduled two week out? Do, but it really. Like, I said, you can just. Pick one schedule on this copy paste, and then you can change it accordingly. You can look at it and be like, actually. I can't work on these days. That helps both you and helps the person making the schedule and and the employee.
+
+[Ramon]
+Because now! You both have eyes on it, and then you can actually have that discussion like he was just saying. It's, like, oh actually, I was playing to do this thing on. Go to this show this three Saturdays from now. And then that's enough time out to be. Like, oh, okay, well, I'll just move this over here and move this person over here. And then, you, you know, it's. It's just better planning, but everyone shares some kind of responsibility,
+
+[John]
+But I think the challenge for me, is like, there's a big difference between, like, um, if you want to play at something that you normally work put in time off versus, like? You want to do that would overlap with a potential shift, putting time off, right,
+
+[Ramon]
+Like these
+
+[Speaker 7]
+Are. These are two different asks. Right, so,
+
+[Ramon]
+But I mean?
+
+[John]
+The
+
+[Ramon]
+Burdens on the schedule maker if they didn't the schedule's not out. And you're like, you know, what? I'm gonna be somewhere. On Friday, even though I work every Friday. Yeah, but if it's not on the schedule, you can be like, well, no, I plan something sorry, like you should have put it out. Yeah,
+
+[John]
+And that's, I mean,
+
+[Ramon]
+It's, you know, it's? Petty, but it's something that you could do, and that's the argument. You can't argue with us, like, ah, because I like, oh, but you always work at Friday. It's like, but I get it. No, you're right, you know? So, that's why it just makes sense to just just put it out there. Yeah.
+
+[John]
+Systems systems, so systems all the way down. So, yeah, it's, but it starts.
+
+[Ramon]
+It's just people. Yeah, I
+
+[John]
+Mean, the systems of people. Yeah, we talked about. We talk about information manage systems, it's it's um, people processes in it. Yes, the diamond, you're gonna have
+
+[Ramon]
+The best tool in our universe. If no one knows how to use it, or if no one uses it as
+
+[John]
+A set, no
+
+[Ramon]
+One uses it. If someone's then, it's like all right, cool. We have a great straight tool. No one's using so.
+
+[Ramon]
+All righty.
